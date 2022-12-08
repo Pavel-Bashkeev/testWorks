@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('./components/head.html', {
+  "title":"Gulp assembly with pug"
+})
+<body>
+  @@include('./components/header.html')
+  <main class="main">
+    deploy
+    <svg class='sprite-close'>
+    <use xlink:href='./images/sprite.svg#close'>
+    </use>
+    </svg>
+    <a href="./info.html">info</a>
+  </main>
+  @@include('./components/footer.html')
+  <script src="./js/main.min.js"></script>
+</body>
+</html>

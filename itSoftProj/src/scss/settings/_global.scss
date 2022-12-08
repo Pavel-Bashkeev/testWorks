@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	display: block;
+}
+
+img,picture {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+body {
+	letter-spacing: 0.43px;
+	background-color: #ffffff;
+	font: 400 20px / 24px var(--font);
+
+}
+
+.btn-reset {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+	color: inherit;
+	font: inherit;
+	padding: 0;
+}
+.hide {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	position: absolute;
+	transition: opacity 1.3s;
+}
