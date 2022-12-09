@@ -41,4 +41,4 @@ ex_files
 Thumbs.db
 
 #config
-/**/*ftp.js
+/**/gulp/config/ftp.js
