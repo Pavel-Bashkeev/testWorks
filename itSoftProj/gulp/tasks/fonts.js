@@ -20,4 +20,6 @@ export const fontsConvert = () => {
   .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`))
   .pipe(ttf2eot())
   .pipe(app.gulp.dest(app.path.build.fonts))
+  .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`))
+  .pipe(app.gulp.dest(app.path.build.fonts))
 }

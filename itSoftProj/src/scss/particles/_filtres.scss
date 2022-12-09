@@ -1,0 +1,12 @@
+.filters{
+  border-radius: 10px;
+  border:1px solid rgba(0,0,0, .3);
+  box-shadow: 0 0 6px rgba(0,0,0, .5);
+  padding: 20px 10px;
+  max-width: 310px;
+  &__title{
+    margin:0 0 20px;
+    font:600 30px/36px var(--font);
+    color: var(--gray-800);
+  }
+}

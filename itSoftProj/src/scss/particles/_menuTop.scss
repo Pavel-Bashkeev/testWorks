@@ -1,0 +1,89 @@
+.menu-top {
+  @media (max-width:800px) {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    @media (max-width:960px) {
+      flex-direction: column;
+    }
+      gap: 5px;
+    color: var(--gray-200);
+    transition: color 0.3s ease-in-out;
+    position: relative;
+    &--contacts{
+      &::after{
+        display: none;
+      }
+    }
+    &::after{
+      content: '';
+      width: 0;
+      height: 2px;
+      background-color: var(--gray-200);
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      transition: width .3s ease-in-out;
+    }
+    &:hover {
+     &::after{
+      width: 100%;
+     }
+     .menu-top__box--contacts{
+      svg{
+        overflow: visible;
+        #marker-map{
+          animation: jumpMarker .9s linear infinite;
+        }
+      }
+     }
+    }
+    &--active{
+      pointer-events: none;
+      &::after{
+        width: 100%;
+       }
+    }
+  }
+  &__icon {
+    display: block;
+    object-fit: cover;
+  }
+  &__box {
+    display: block;
+    &--contacts {
+      .menu-top__icon {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    &--delivery {
+      .menu-top__icon {
+        width: 30px;
+        height: 26px;
+      }
+    }
+  }
+
+  &__text {
+    display: block;
+    font: 600 14px/16px var(--font);
+    color: inherit;
+  }
+}
+@keyframes jumpMarker {
+  0%   {transform: translateY(0)}
+  40%  {transform: translateY(-10px)}
+  100% {transform: translateY(0)}
+}

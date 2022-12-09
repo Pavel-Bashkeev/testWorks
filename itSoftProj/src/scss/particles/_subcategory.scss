@@ -1,0 +1,46 @@
+.subcategory{
+  &__title{
+    font:700 40px/50px var(--font);
+    color:var(--gray-800);text-align: center;
+  }
+}
+.subcategory-wrapper{
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  grid-template-rows:auto 1fr ;
+  grid-template-areas: 
+  "filters actions"
+  "filters contentProd"
+  ;
+  gap:20px;
+  align-items: flex-start;
+
+  &__actions,
+  &__content{
+    border-radius: 10px;
+  border:1px solid rgba(0,0,0, .3);
+  box-shadow: 0 0 6px rgba(0,0,0, .5);
+  padding: 20px 10px;
+  }
+  &__filters{
+    grid-area: filters;
+  }
+  &__actions{
+    grid-area: actions;
+  }
+  &__content{
+    grid-area: contentProd;
+  }
+  &__content.view-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap:20px;
+    justify-items:center;
+  }
+  &__content.view-list{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@import './cardPreviewProduct';

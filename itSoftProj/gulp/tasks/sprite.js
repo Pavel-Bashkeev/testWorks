@@ -10,11 +10,11 @@ export const spriteIcons = () => (
       messange: "Error: <%= error.messamge %>"
     })
   ))
-  .pipe(svgMin({
-    js2svg: {
-      pretty: true
-    }
-  }))
+  // .pipe(svgMin({
+  //   js2svg: {
+  //     pretty: true
+  //   }
+  // }))
   .pipe(cheerio({
     run: function ($) {
       $('[fill]').removeAttr('fill');

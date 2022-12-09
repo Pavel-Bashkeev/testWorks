@@ -1,0 +1,13 @@
+.sprite{
+  &-phone{
+    fill: var(--primary);
+    width: 40px;
+    height: 40px;
+  }
+  &-chat{
+    width: 40px;
+    height: 40px;
+    fill: var(--primary);
+    
+  }
+}

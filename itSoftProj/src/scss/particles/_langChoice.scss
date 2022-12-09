@@ -1,0 +1,29 @@
+.lang{
+  position: relative;
+  cursor: pointer;
+}
+.lang-output{
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  &__text{
+    font:600 14px/15px var(--font);
+    color: var(--gray-200);
+    text-transform: uppercase;
+    display: block;
+  }
+  &__flag{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__img{
+    display: block;
+    object-fit: cover;
+  }
+}
+.lang-list{
+  display: none;
+}

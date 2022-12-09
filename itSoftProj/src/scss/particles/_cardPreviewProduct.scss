@@ -1,0 +1,185 @@
+.subcategory-content {
+  &__item {
+    padding: 13px 12px;
+    background: #ffffff;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+  }
+}
+.view-grid {
+  .prod-card {
+    display: grid;
+    grid-template-areas:
+      "box"
+      "title"
+      "data"
+      "linkCard"
+      "info"
+      "btns";
+    overflow: hidden;
+    gap: 10px;
+    position: relative;
+    perspective: 1000px;
+    &__box {
+      border-radius: 15px;
+      overflow: hidden;
+      grid-area: box;
+    }
+    &__title {
+      font: 700 14px/18px var(--font);
+      color: var(--gray-800);
+      margin: 0;
+      grid-area: title;
+    }
+    &__data {
+      display: flex;
+      justify-content: space-between;
+      grid-area: data;
+    }
+    &__artik {
+      font: 400 14px/18px var(--font);
+      color: var(--gray-600);
+      margin: 0;
+    }
+    &__price {
+      font: 700 14px/18px var(--font);
+      color: var(--gray-800);
+      margin: 0;
+    }
+    &__link {
+      background-color: var(--primary);
+      width: 90%;
+      padding: 10px;
+      text-align: center;
+      font: 400 14px/18px var(--font);
+      text-transform: uppercase;
+      color: var(--gray-200);
+      border-radius: 30px;
+      margin: 0 auto;
+      display: block;
+      grid-area: linkCard;
+    }
+    &__btns {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      grid-area: btns;
+      color: var(--white);
+      background-color: var(--primary);
+      padding: 10px 0;
+      margin: 0 -12px -13px;
+    }
+    &__info {
+      visibility: hidden;
+      max-height: 0;
+    }
+    &__info-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    &__info-title {
+      margin: 0;
+      font: 700 14px/18px var(--font);
+      color: var(--gray-800);
+    }
+    &__info-text {
+      margin: 0;
+      font: 400 14px/18px var(--font);
+      color: var(--gray-800);
+    }
+  }
+}
+.view-list {
+  .prod-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: max-content auto 200px;
+    grid-template-areas:
+      "box title ."
+      "box . data"
+      "box info btns"
+      "box . linkCard";
+    gap: 30px;
+    align-items: center;
+    &__box {
+      border-radius: 15px;
+      overflow: hidden;
+      grid-area: box;
+      max-width: 250px;
+    }
+    &__title {
+      font: 700 14px/18px var(--font);
+      color: var(--gray-800);
+      margin: 0;
+      grid-area: title;
+    }
+    &__data {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      grid-area: data;
+      gap: 10px;
+      align-items: center;
+    }
+    &__artik {
+      font: 400 14px/18px var(--font);
+      color: var(--gray-600);
+      margin: 0;
+    }
+    &__price {
+      font: 700 14px/18px var(--font);
+      color: var(--gray-800);
+      margin: 0;
+    }
+    &__link {
+      background-color: var(--acent);
+      width: 90%;
+      padding: 10px;
+      text-align: center;
+      font: 400 14px/18px var(--font);
+      text-transform: uppercase;
+      color: var(--gray-200);
+      border-radius: 30px;
+      margin: 0 auto;
+      display: block;
+      grid-area: linkCard;
+    }
+    &__btns {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      grid-area: btns;
+      color: var(--white);
+      padding: 10px 0;
+    }
+    &__info {
+      grid-area: info;
+    }
+    &__info-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    &__info-title {
+      margin: 0;
+      font: 700 14px/18px var(--font);
+      color: var(--gray-800);
+    }
+    &__info-text {
+      margin: 0;
+      font: 400 14px/18px var(--font);
+      color: var(--gray-800);
+    }
+  }
+}

@@ -12,5 +12,5 @@ export const ftp = () => {
       messange: "Error: <%= error.messamge %>"
     })
   ))
-  .pipe(ftConnect.dest(`/pawell.site/public_html/${app.path.ftp}/${app.path.rootFolder}`))
+  .pipe(ftConnect.dest(`/createx.pawell.site/public_html/`))
 }

@@ -1,0 +1,16 @@
+.tabs__panel{
+	display: none;
+}
+.tabs__panel--active{
+	display: block;
+}
+.tabs__item-btn--active{
+	background-color: rgb(252, 210, 210);
+}
+.tabs__item-btn:focus{
+	background-color: rgb(16, 67, 163);
+	color: white;
+}
+.tabs__panel:focus{
+	border:2px solid green;
+}

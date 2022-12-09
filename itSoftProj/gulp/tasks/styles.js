@@ -5,6 +5,7 @@ import cleanCss from 'gulp-clean-css'; // Сжатие css файла
 import webpCss from 'gulp-webpcss' // Вывод WEBP изображений
 import autoPrefixer from 'gulp-autoprefixer'; // Добовление вендорных префиксов
 import gcmq from 'gulp-group-css-media-queries' // Групировка медиа запросов
+import newer from 'gulp-newer';
 
 const sass = gulpSass(dartSass);
 
@@ -18,6 +19,7 @@ export const styles = () => {
         messange: "Error: <%= error.messamge %>"
       })
     ))
+    .pipe(newer(`${app.path.srcFolder}/scss/libs/`))
     .pipe(app.plugins.gulpIf(app.isDev, app.plugins.sourceMaps.init({
       loadMaps:true
     })))
@@ -54,3 +56,8 @@ export const styles = () => {
     .pipe(app.gulp.dest(app.path.build.css))
     .pipe(app.plugins.browserSync.stream())
 }
+
+export const externalLibs = () => (
+  app.gulp.src(app.path.src.exStyles)
+  .pipe(app.gulp.dest(app.path.build.css))
+)

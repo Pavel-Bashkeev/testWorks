@@ -1,1 +1,5 @@
 @import '../vendor/mixins';
+@include font-face('openSans', 'OpenSans-Light', 300);
+@include font-face('openSans', 'OpenSans-Regular', 400);
+@include font-face('openSans', 'OpenSans-SemiBold', 600);
+@include font-face('openSans', 'OpenSans-Bold', 700);

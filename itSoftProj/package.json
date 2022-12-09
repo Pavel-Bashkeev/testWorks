@@ -16,6 +16,10 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -46,14 +50,16 @@
     "gulp-webp": "^4.0.1",
     "gulp-webp-html-nosvg": "^1.0.2",
     "gulp-webpcss": "^1.1.1",
+    "html-webpack-plugin": "^5.5.0",
     "sass": "^1.48.0",
+    "terser-webpack-plugin": "^5.3.3",
     "vinyl-ftp": "^0.6.1",
     "webp-converter": "2.2.3",
     "webpack": "^5.66.0",
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "smoothscroll-polyfill": "^0.4.4",
+    "@babel/polyfill": "^7.12.1",
     "vanilla-lazyload": "^17.5.0"
   }
 }

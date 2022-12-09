@@ -1,0 +1,22 @@
+.accordion {
+	--transition-anim: 0.3s;
+}
+
+.accordion-item {
+	.accordion-item__content {
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		pointer-events: none;
+		transition: all var(--transition-anim) ease-in-out;
+		will-change: max-height;
+	}
+}
+
+.accordion-item.open {
+	.accordion-item__content {
+		opacity: 1;
+		pointer-events: all;
+		transition: all var(--transition-anim) ease-in-out;
+	}
+}

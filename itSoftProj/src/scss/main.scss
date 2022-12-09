@@ -1,6 +1,32 @@
-@import './settings/classFrame';
-@import './settings/fonts';
-@import './settings/vars';
-@import './settings/global';
+@import "./settings/classFrame";
+@import "./settings/fonts";
+@import "./settings/vars";
+@import "./settings/global";
+@import "./settings/sprite";
 
-@import './components/header';
+@import "./components/header";
+@import "./components/navigation";
+@import "./particles/mainMenu";
+
+//Page Product
+@import 'components/cardProduct';
+@import "./components/product";
+@import "./components/productSeries";
+@import "./components/productAnother";
+// particles
+@import './particles/ral';
+@import './particles/formWholesale';
+
+
+@import "./components/footer";
+
+// Plugins
+@import './plagins/pluginModal';
+
+// page subcategory
+// @import './components/subCategorySection';
+
+
+// @import './particles/filtres';
+// @import './particles/sort';
+

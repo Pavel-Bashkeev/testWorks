@@ -1,0 +1,85 @@
+.card-product{
+  max-width: 300px;
+  transition: all .3s ease-in-out;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  &__box{
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  &__image{
+    display: block;
+  }
+  &__vendor{
+    font: 400 19px/20px var(--font);
+    color: var(--gray-800);
+    margin: 0 0 5px;
+    padding: 5px;
+    text-align: center;
+    &--accent{
+      font-weight: 700;
+    }
+  }
+  &__title{
+    font: 400 18px/20px var(--font);
+    color: var(--gray-700);
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+  }
+  &__link{
+    display: block;
+    margin: 0 0 auto;
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+    color: var(--black);
+    padding: 10px 0;
+    gap: 10px;
+  }
+  &__btn{
+    color: var(--gray-800);
+    svg{
+      fill: transparent;
+    }
+    &:hover{
+      color: var(--white);
+      svg{
+        fill: var(--gray-800);
+      }
+    }
+  }
+  &__price{
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  &__actions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.card-price{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  &__old{
+    display: block;
+    font: 700 15px/18px var(--font);
+    color: var(--gray-400);
+    margin: 0;
+  }
+  &__discount{
+    margin-left: 5px;
+  }
+  &__new{
+    font: 700 23px/25px var(--font);
+    color: var(--gray-800);
+    margin: 0;
+    display: block;
+  }
+}

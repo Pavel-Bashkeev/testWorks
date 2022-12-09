@@ -1,45 +1,92 @@
+html {
+  box-sizing: border-box;
+}
 *,
 *::after,
 *::before {
-	box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
-	display: block;
+  color: inherit;
+  text-decoration: none;
+  display: block;
 }
 
-img,picture {
-	width: 100%;
-	height: auto;
-	display: block;
+img {
+  width: 100%;
+  height: auto;
+}
+img:not([src]):not([srcset]) {
+  visibility: hidden;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &::first-letter {
+    text-transform: uppercase;
+  }
 }
 body {
-	letter-spacing: 0.43px;
-	background-color: #ffffff;
-	font: 400 20px / 24px var(--font);
-
+  background: linear-gradient(90deg, #015384, #339e99);
+  font: 400 20px / 1.1 var(--font);
+  color: var(--gray-800);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+	min-height: 100vh;
 }
 
 .btn-reset {
-	border: none;
-	outline: none;
-	background-color: transparent;
-	cursor: pointer;
-	color: inherit;
-	font: inherit;
-	padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  display: block;
 }
-.hide {
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	clip: rect(0 0 0 0);
-	position: absolute;
-	transition: opacity 1.3s;
+.list-reset {
+  margin: 0;
+  padding: 0;
 }
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+.container {
+  max-width: 1600px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.main {
+  background-color: var(--white);
+  padding: 10px 0 40px;
+	flex: 1;
+  border-radius: 30px;
+  @media (min-width: 1600px) {
+    padding-bottom: 80px;
+  }
+  @media (max-width: 1200px) {
+    padding-top: 24px;
+  }
+}
+@import "../particles/breadcrumbs";
+@import "../components/ui-components";

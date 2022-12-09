@@ -1,0 +1,128 @@
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-left: auto;
+  justify-content: flex-end;
+  @media (max-width: 1350px) {
+    width: 440px;
+    //margin-left: auto;
+  }
+  @media (max-width:1150px) {
+    flex-wrap: wrap;
+    width: 75px;
+    gap: 5px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    justify-content: space-between;
+    background-color: #2960b3;
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+    padding: 5px 10px;
+    gap: 10px;
+    border-radius: 10px;
+    max-width: 210px;
+    flex: 1;
+    @media (max-width: 1150px) {
+      gap: 7px;
+      flex: auto;
+      width: 35px;
+      height: 30px;
+      border-radius: 5px;
+      justify-content: center;
+      padding: 0;
+    }
+    /*&:hover {
+      box-shadow: 0px 0px 5px rgb(48, 48, 48);
+      .header-contact__icon--whatsapp{
+        color: #39ae41;
+        transform: scale(1);
+      }
+      .header-contact__icon--phone{
+        animation: buzzing .6s ease-in-out infinite;
+      }
+      .header-contact__icon--mail{
+        transform: scale(1);
+      }
+    }*/
+    &:first-child {
+      margin-left: auto;
+    }
+    &--mail{
+      display: none;
+      @media (max-width: 1150px) {
+        display: flex
+      }
+    }
+    &--another{
+      display: none;
+      @media (max-width: 1150px) {
+        display: flex;
+      }
+    }
+    &--mail,&--phone{
+      svg{
+        display: none;
+        @media (max-width: 1150px) {
+          display: block;
+        }
+      }
+    }
+  }
+  &__icon {
+    display: block;
+    transform: scale(0.9);
+    transition: all .3s ease-in-out;
+    &--mail {
+      width: 30px;
+      height: 24px;
+    }
+    &--phone{
+      width: 24px;
+      height: 24px;
+    }
+    &--whatsapp{
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__text {
+    color: inherit;
+    font: 600 17px/18px var(--font);
+    letter-spacing: 0.2px;
+    @media (max-width:1150px) {
+      display: none;
+    }
+  }
+}
+@keyframes buzzing {
+  0%{
+    transform: rotate(-20deg) scale(1.1);
+    color:var(--gray-400);
+  }
+  10%{
+    transform: rotate(20deg) scale(.9);
+    color:var(--gray-200)
+  }
+
+  45%{
+    transform: rotate(-20deg) scale(1.1);
+    color:var(--gray-400);
+  }
+  50%{
+    transform: rotate(20deg) scale(.9);
+    color:var(--gray-200)
+  }
+  85%{
+    transform: rotate(-20deg) scale(1.1);
+    color:var(--gray-400);
+  }
+  100%{
+    transform: rotate(20deg) scale(.9);
+    color:var(--gray-200)
+  }
+}

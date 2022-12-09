@@ -1,0 +1,14 @@
+.logo{
+  flex: 1;
+  max-width: 330px;
+  margin-bottom: -12px;
+  @media (max-width: 1400px) {
+    max-width: 300px;
+  }
+  @media (max-width: 410px) {
+    max-width: 150px;
+  }
+  &__img{
+    display: block;
+  }
+}
